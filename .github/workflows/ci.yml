@@ -1,7 +1,11 @@
 name: Continous integration
 
 on:
-  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
     branches:
       - '*'
 
