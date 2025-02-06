@@ -21,7 +21,7 @@ jobs:
     # To ensure you only run this action when closing a Release PR, you should
     # uncomment this
     # if: contains(github.event.pull_request.head.ref, 'changeset-release')
-
+    if: false
     name: 'Upload script'
     runs-on: ubuntu-latest
 
