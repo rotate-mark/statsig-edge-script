@@ -1,30 +1,32 @@
 {
-  "name": "es-empty-script",
-  "version": "0.7.3",
+  "name": "statsig-edge-script",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "type": "module",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BunnyWay/es-empty-script.git"
+    "url": "git+https://github.com/rotate-mark/statsig-edge-script.git"
   },
   "keywords": [
-    "github",
-    "bunny"
+    "bunny",
+    "statsig",
+    "edge script"
   ],
-  "author": "Bunny Devs",
+  "author": "Mark Leung<mark.leung@studiorotate.com>",
   "license": "MIT",
   "scripts": {
     "lint": "deno lint",
-    "test": "deno test --allow-none -A src/**/*.test.ts",
+    "test": "deno test --permit-no-files -A src/**/*.test.ts",
     "check": "deno check src/main.ts",
-    "build": "mkdir -p dist && deno bundle src/main.ts dist/index.ts",
-    "dev": "deno run src/main.ts",
+    "build": "mkdir -p dist && deno run --allow-read --allow-write --allow-net scripts/build.ts",
+    "dev": "deno run --watch-hmr --allow-net src/main.ts",
     "release": "echo \"No release\"",
     "ci:version": "pnpm changeset version",
     "ci:publish": "./scripts/publish.sh"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2"
+    "@changesets/cli": "^2.26.2",
+    "esbuild": "^0.24.2"
   }
 }
