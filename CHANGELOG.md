@@ -1,5 +1,15 @@
 # es-empty-script
 
+## 1.0.0
+
+### Major Changes
+
+- 9caeb00: First version of bunny-statsig edge script
+
+### Patch Changes
+
+- f689d5d: Fix Release Changeset action permissions
+
 ## 0.7.3
 
 ### Patch Changes
