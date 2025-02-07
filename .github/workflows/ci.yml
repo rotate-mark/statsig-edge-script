@@ -9,6 +9,10 @@ on:
     branches:
       - '*'
 
+permissions:
+  checks: write
+  pull-requests: write # only required if `comment: true` was enabled
+
 jobs:
   checkout:
     runs-on: ubuntu-latest
@@ -26,4 +30,11 @@ jobs:
         run: deno task lint
 
       - name: 'Test'
-        run: deno task test
+        run: deno task test --junit-path=./junit-report.xml
+
+      - name: 'Publish test results'
+        uses: mikepenz/action-junit-report@v5
+        if: success()
+        with:
+          report_paths: '**/junit-report.xml'
+          comment: true
