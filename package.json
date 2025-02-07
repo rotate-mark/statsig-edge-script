@@ -19,7 +19,7 @@
     "lint": "deno lint",
     "test": "deno test --permit-no-files -A src/**/*.test.ts",
     "check": "deno check src/main.ts",
-    "build": "mkdir -p dist && deno run --allow-read --allow-write --allow-net scripts/build.ts",
+    "build": "mkdir -p dist && deno run --allow-read --allow-write --allow-net --allow-env scripts/build.ts",
     "dev": "deno run --watch-hmr --allow-net src/main.ts",
     "release": "echo \"No release\"",
     "ci:version": "pnpm changeset version",
