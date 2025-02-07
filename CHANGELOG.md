@@ -1,5 +1,11 @@
 # es-empty-script
 
+## 1.0.1
+
+### Patch Changes
+
+- ff7e1bf: Fix to allow read environment variables
+
 ## 1.0.0
 
 ### Major Changes
