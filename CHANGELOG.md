@@ -1,5 +1,11 @@
 # es-empty-script
 
+## 1.0.2
+
+### Patch Changes
+
+- 138451b: Fix to allow run script on CI
+
 ## 1.0.1
 
 ### Patch Changes
